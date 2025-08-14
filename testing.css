@@ -1,73 +1,100 @@
-/* ================================================
-   General Body Styles
-================================================= */
+/* Main Stylesheet for IAT Enterprises and Portfolio Pages */
+
+/* Base Styles */
 body {
-  background-color: silver; /* was black */
-  background-image: url("https://raw.githubusercontent.com/Abdullah-Khan-Sherwani/Sedgewick_tribute_website/refs/heads/main/iat_logo.jpg")
-  font-family: Consolas, monospace;
+  font-family: 'Consolas', monospace;
+  line-height: 1.6;
   margin: 0;
-  padding: 0;
+  padding: 20px;
+  color: white;
+  background-color: #121212;
+  background-image: url("https://raw.githubusercontent.com/Abdullah-Khan-Sherwani/Sedgewick_tribute_website/refs/heads/main/iat_logo.jpg");
   background-position: right top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 200px;
 }
 
-/* ================================================
-   Headings
-================================================= */
-h1 {
-  margin-left: 220px;
-  text-decoration: underline lightblue solid 5px;
-  width: 35%;
-  letter-spacing: 10px;
-  font-size: 35px;
+/* IAT Enterprises Specific Styles */
+body:not(.portfolio) {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-h2 {
-  margin-top: 30px;
-  width: 25%;
-  border: 4px solid orange;
-  border-radius: 20px;
-  background-color: orange;
-  outline: solid gold;
+body:not(.portfolio) header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-/* ================================================
-   Text Elements
-================================================= */
+body:not(.portfolio) h1 {
+  color: gold;
+  font-size: 2.5em;
+  margin: 20px 0 10px;
+  text-decoration: underline lightblue solid 3px;
+  letter-spacing: 5px;
+}
+
+body:not(.portfolio) .tagline {
+  color: white;
+  font-style: italic;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Team Section */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.team-list, .team-table {
+  flex: 1;
+  min-width: 300px;
+}
+
+dl {
+  display: block;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
 dt {
   color: orange;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 dd {
-  color: yellow;
-}
-
-li {
   color: lightblue;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
-medium {
-  margin-left: 220px;
+/* Tables */
+table {
+  width: 100%;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* ================================================
-   Tables
-================================================= */
-table, th, td {
-  border: 2px solid;
-  border-collapse: collapse;
-  color: white;
-  font-family: Consolas;
-  width: 50%;
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #444;
 }
 
 th {
-  height: 50px;
   background-color: orange;
-  padding: 10px;
+  color: black;
+  font-weight: bold;
 }
 
-td {
-  padding: 10px;
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 td:hover {
@@ -75,26 +102,169 @@ td:hover {
   color: black;
 }
 
-/* ================================================
-   Hidden Elements
-================================================= */
-dl {
-  display: none;
+/* Forms */
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
 }
 
-/* ================================================
-   IDs & Classes
-================================================= */
-#first {
-  background-color: black;
+.form-group {
+  margin-bottom: 15px;
 }
 
-/* ================================================
-   Notes
-================================================= */
-/* 
-  *{} affects all elements.
-  .tester{} affects all elements with class="tester".
-  h1.tester{} affects only h1 elements with class="tester".
-  Opacity can be used for transparency: e.g., opacity: 0.5;
-*/
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: lightblue;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  background-color: #333;
+  border: 1px solid #555;
+  color: white;
+}
+
+button {
+  background-color: orange;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: gold;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-media li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.social-media a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: gold;
+  text-decoration: underline;
+}
+
+.disclaimer {
+  font-size: 0.8em;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+/* Portfolio Page Specific Styles */
+body.portfolio {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: none;
+}
+
+body.portfolio h1 {
+  color: gold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+body.portfolio h2, 
+body.portfolio h3 {
+  text-align: center;
+  color: lightblue;
+}
+
+body.portfolio blockquote {
+  text-align: center;
+  padding: 20px;
+  margin: 30px 0;
+  font-size: 1.2em;
+}
+
+body.portfolio .image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+body.portfolio img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+body.portfolio .article-link {
+  text-align: center;
+  margin: 20px 0;
+}
+
+body.portfolio a {
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body.portfolio a:hover {
+  text-decoration: underline;
+  color: orange;
+}
+
+body.portfolio ul {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 40px;
+  border-radius: 10px;
+  list-style-type: square;
+}
+
+body.portfolio li {
+  color: lightblue;
+  margin-bottom: 10px;
+}
+
+body.portfolio .copyright {
+  text-align: center;
+  margin-top: 40px;
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-container {
+      flex-direction: column;
+  }
+  
+  body:not(.portfolio) h1 {
+      font-size: 1.8em;
+      letter-spacing: 3px;
+  }
+  
+  body.portfolio blockquote {
+      font-size: 1em;
+      padding: 15px;
+  }
+}
