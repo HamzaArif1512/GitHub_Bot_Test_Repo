@@ -1,102 +1,100 @@
-/* Testing 123...*/
-
+/* ================================================
+   General Body Styles
+================================================= */
 body {
-  background-color: black /*changed to silver*/
+  background-color: silver; /* was black */
+  background-image: url("https://raw.githubusercontent.com/Abdullah-Khan-Sherwani/Sedgewick_tribute_website/refs/heads/main/iat_logo.jpg")
+  font-family: Consolas, monospace;
+  margin: 0;
+  padding: 0;
+  background-position: right top;
 }
 
-  body {
- background-image: url("https://raw.githubusercontent.com/Abdullah-Khan-Sherwani/Sedgewick_tribute_website/refs/heads/main/iat_logo.jpg")
-
-background-position: right top;
-} 
-
-#first{
-  background-color: black
+/* ================================================
+   Headings
+================================================= */
+h1 {
+  margin-left: 220px;
+  text-decoration: underline lightblue solid 5px;
+  width: 35%;
+  letter-spacing: 10px;
+  font-size: 35px;
 }
 
-/*.tester{} code affects all class=heading elements
-while h1.tester{} code affects all the h1 elements with he tester class*/
-
-/* *{} affects all elements */
-
-/* opacity = 0.5 half transparency of the font */
-
-dl {
-  display:none; 
+h2 {
+  margin-top: 30px;
+  width: 25%;
+  border: 4px solid orange;
+  border-radius: 20px;
+  background-color: orange;
+  outline: solid gold;
 }
 
-
+/* ================================================
+   Text Elements
+================================================= */
 dt {
   color: orange;
 }
+
 dd {
-  color: yellow
+  color: yellow;
 }
+
 li {
-  color: lightblue
-}
-
-h1{
-   margin-left: 220px; 
-   text-decoration: underline lightblue solid 5px;
-  /* text-align: center
-  margin-top:30px; */
- /*  border-style: solid;
-  border-width: 4px;
-  border-color: orange; */
-/* background-color:gold;
-  border: solid 4px orange; */
-  width: 35%;
-  letter-spacing: 10px;
-  font-family: Consolas;
-  font-size: 35px
-}
-
-h2{
-  
-  margin-top:30px;
-  border: solid 4px orange;
-  border-radius: 20px;
-  background-color: orange;
-  width: 25%;
-  outline-style: solid;
-  outline-color: gold;
-  /* text-align: left: */
+  color: lightblue;
 }
 
 medium {
-  margin-left:220px
-    
+  margin-left: 220px;
 }
 
+/* ================================================
+   Tables
+================================================= */
 table, th, td {
   border: 2px solid;
-  width 50%;
-  border-collapse:collapse;
+  border-collapse: collapse;
   color: white;
-  font-family: consolas;
+  font-family: Consolas;
+  width: 50%;
 }
 
 th {
   height: 50px;
   background-color: orange;
-}
-
-th,td {
   padding: 10px;
 }
 
-td:hover{
+td {
+  padding: 10px;
+}
+
+td:hover {
   background-color: gold;
-  color:black;
+  color: black;
 }
 
-body{
-  font-family:consolas, monospace;
+/* ================================================
+   Hidden Elements
+================================================= */
+dl {
+  display: none;
 }
 
+/* ================================================
+   IDs & Classes
+================================================= */
+#first {
+  background-color: black;
+}
 
-
-
-
-           
+/* ================================================
+   Notes
+================================================= */
+/* 
+  *{} affects all elements.
+  .tester{} affects all elements with class="tester".
+  h1.tester{} affects only h1 elements with class="tester".
+  Opacity can be used for transparency: e.g., opacity: 0.5;
+*/
