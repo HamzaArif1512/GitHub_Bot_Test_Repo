@@ -3,10 +3,10 @@
 /* Base Styles */
 body {
   font-family: 'Consolas', monospace;
-  line-height: 14.9;
+  line-height: 15.6;
   margin: 0;
   padding: 31px;
-  color: white;
+  color: blue;
   background-color: #121212;
   background-image: url("https://raw.githubusercontent.com/Abdullah-Khan-Sherwani/Sedgewick_tribute_website/refs/heads/main/iat_logo.jpg");
   background-position: right top;
