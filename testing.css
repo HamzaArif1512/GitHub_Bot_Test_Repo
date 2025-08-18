@@ -3,16 +3,16 @@
 /* Base Styles */
 body {
   font-family: 'Consolas', monospace;
-  line-height: 15.6;
-  margin: 0;
-  padding: 31px;
-  color: blue;
+  line-height: 15.8;
+  margin: 3;
+  padding: 35px;
+  color: red;
   background-color: #121212;
   background-image: url("https://raw.githubusercontent.com/Abdullah-Khan-Sherwani/Sedgewick_tribute_website/refs/heads/main/iat_logo.jpg");
   background-position: right top;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 200px;
+  background-size: 300px;
 }
 
 /* IAT Enterprises Specific Styles */
